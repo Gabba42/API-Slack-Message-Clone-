@@ -30,22 +30,19 @@ public class MessageRepository {
        return this.messages.get(id);
     }
 
-    public Message deleteMessageById(Integer id) {
+    public void deleteMessageById(Integer id) {
         this.messages.remove(id);
-        return null;
     }
 
-    public Message createMessage(Message message) {
+    public void createMessage(Message message) {
        this.messages.put(message.getId(), message);
-       return message;
     }
 
-    public Message updateMessage(Message newMessage) {
+    public void updateMessage(Message newMessage) {
         Message message = messages.get(newMessage.getId());
         message.setMessageBody(message.getMessageBody());
 //        message.setDate(message.getDate());
         messages.put(newMessage.getId(),newMessage);
-        return newMessage;
     }
 
 }

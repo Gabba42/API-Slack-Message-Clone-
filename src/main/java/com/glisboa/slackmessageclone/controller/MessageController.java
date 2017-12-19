@@ -44,11 +44,11 @@ public class MessageController {
 
 
     @PostMapping
-    public ResponseEntity<Message> createMessage(@RequestBody Message message) {
+    public ResponseEntity<Void> createMessage(@RequestBody Message message) {
 
         this.messageService.createMessage(message);
 
-        return new ResponseEntity<Message>(message, HttpStatus.CREATED);
+        return new ResponseEntity<Void>(HttpStatus.CREATED);
 
     }
 

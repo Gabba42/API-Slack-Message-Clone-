@@ -22,19 +22,16 @@ public class MessageService {
         return messageRepository.getMessageById(id);
     }
 
-    public Message createMessage(Message message) {
+    public void createMessage(Message message) {
         messageRepository.createMessage(message);
-        return message;
     }
 
-    public Message updateMessage(Message message) {
+    public void updateMessage(Message message) {
         messageRepository.updateMessage(message);
-        return message;
     }
 
-    public Message deleteMessageById(Integer id) {
+    public void deleteMessageById(Integer id) {
         messageRepository.deleteMessageById(id);
-        return null;
     }
 }
 

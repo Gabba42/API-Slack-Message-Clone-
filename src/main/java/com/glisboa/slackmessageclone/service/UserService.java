@@ -15,29 +15,22 @@ public class UserService {
     private UserRepository userRepository;
 
     public Collection<User> getAllUsers() {
-
         return userRepository.getAllUsers();
     }
 
     public User getUserById(Integer id) {
-
         return userRepository.getUserById(id);
     }
 
-    public User updateUser(User updatesUser) {
-
+    public void updateUser(User updatesUser) {
         userRepository.updateUser(updatesUser);
-        return updatesUser;
-
     }
 
-    public User createUser(User user) {
+    public void createUser(User user) {
         userRepository.createUser(user);
-        return user;
     }
 
-    public User deleteUserById(Integer id) {
+    public void deleteUserById(Integer id) {
         userRepository.deleteUserById(id);
-        return null;
     }
 }

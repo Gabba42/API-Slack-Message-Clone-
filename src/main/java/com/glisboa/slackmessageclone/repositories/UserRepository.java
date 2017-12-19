@@ -32,22 +32,17 @@ public class UserRepository {
         return this.users.get(id);
     }
 
-    public User updateUser(User updatesUser) {
+    public void updateUser(User updatesUser) {
         User user1 = users.get(updatesUser.getId());
         user1.setName(updatesUser.getName());
         users.put(updatesUser.getId(), updatesUser);
-        return null;
-
     }
 
-    public User createUser(User user) {
+    public void createUser(User user) {
         users.put(user.getId(), user);
-        return null;
     }
 
-    public User deleteUserById(Integer id) {
+    public void deleteUserById(Integer id) {
         users.remove(id);
-        return null;
-
     }
 }
